@@ -1,5 +1,6 @@
-# projeto - ADC
-Este projeto busca criar um app que organize e facilite a utilização de vídeos criados por mim para o estudo do direito, especialmente para concursos.
+# develop - projeto - ADC
+Espaço de desenvolvimento do projeto
+
 
 O projeto básico consiste em:
 1. ter uma tela inicial simples e explicativa
