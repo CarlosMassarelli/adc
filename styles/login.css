@@ -19,7 +19,7 @@ header{
     align-items: center;
     justify-content: left;
     width: 80%;
-    margin: 0 0 0 16rem;
+    margin: auto;
 }
 
 header a{
@@ -36,6 +36,7 @@ header p{
     font-weight: 800;
     font-style: italic;
     letter-spacing: -5%;
+    padding: 0 0 0 2rem;
 }
 
 /* SETA */
@@ -53,7 +54,7 @@ main{
     
     display: flex;
     align-items: center;
-    margin-top: 0; /* Definir margem top*/
+    margin-top: -4rem; /* Definir margem top*/
 }
 
 main .container{
@@ -66,13 +67,19 @@ main h2{
     font-size: clamp(25px, 5vw, 2.5rem);
     font-weight: bold;
     margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 /* INPUT E BOTOES */
 
 button, .button, input{
     width: 100%;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.button2{
+    margin-bottom: .5rem;
 }
 
 input{
@@ -81,6 +88,40 @@ input{
     outline: none;
 }
 
+.outlined{
+
+}
+
 .entrelinha{
-    font-size: 1.4rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(14px, 3vw, 1.5rem);
+    color: var(--cinza);
+    font-weight: lighter;
+}
+
+/* LINHA OU */
+.separator{
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.separator div:nth-child(2){
+    color: var(--cinza);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(20px, 4vw, 2rem);
+    font-weight: bold;
+    font-weight: 400;
+    padding: 0 1.35rem;
+    line-height: 0;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3){
+    background: var(--cinza);
+    width: 100%;
+    height: 1px;
 }
