@@ -75,7 +75,7 @@ main h2{
 
 button, .button, input{
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .button2{
@@ -88,9 +88,7 @@ input{
     outline: none;
 }
 
-.outlined{
-
-}
+/* TEXTOS */
 
 .entrelinha{
     display: flex;
@@ -100,6 +98,21 @@ input{
     font-size: clamp(14px, 3vw, 1.5rem);
     color: var(--cinza);
     font-weight: lighter;
+}
+
+.termos{
+    display: block;
+    margin-top: 2rem;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(14px, 3vw, 1.5rem);
+    color: var(--cinza);
+    font-weight: lighter;
+}
+
+.termos > a{
+    text-decoration: underline;
+    color: var(--cinza);
+    font-weight: bold;
 }
 
 /* LINHA OU */
@@ -124,4 +137,42 @@ input{
     background: var(--cinza);
     width: 100%;
     height: 1px;
+}
+
+/* AVISOS */
+
+.box_avisos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: -2rem;
+}
+
+.avisos{
+
+    border: .15rem solid var(--preto);
+    border-radius: 1.5rem;
+    height: 80%;
+    width: 80%;
+    padding: 3rem;
+}
+
+.aviso{
+    color: var(--preto);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(15px, 3vw, 1.5rem);
+    margin-bottom: 3rem;
+    line-height: 2rem;
+
+}
+
+.aviso :nth-child(1){
+    font-weight: bold;
+    font-size: clamp(20px, 4vw, 2rem);
+
+}
+
+.aviso :nth-child(2){
+    padding-left: 1.5rem;
 }
