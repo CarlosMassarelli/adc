@@ -15,27 +15,22 @@
 header{
     grid-area: header;
     font-family: 'MontSerrat', Roboto, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: left;
     width: 80%;
     margin: auto;
 }
 
-header a{
+.inicio{
     display: flex;
-    justify-content: left;
     align-items: center;
-    text-decoration: none;
+    justify-content: flex-start;
 }
 
-header p{
+header a{
     font-family: 'MontSerrat', Roboto, sans-serif;
-    font-size: clamp(25px, 5vw, 2.5rem);
+    font-size: clamp(20px, 4vw, 2rem);
     color: var(--preto);
     font-weight: 800;
     font-style: italic;
-    letter-spacing: -5%;
     padding: 0 0 0 2rem;
 }
 
@@ -54,19 +49,21 @@ main{
     
     display: flex;
     align-items: center;
-    margin-top: -4rem; /* Definir margem top*/
+    justify-content: center;
+    margin-top: -10rem; /* Definir margem top*/
 }
 
 main .container{
-    width: min(35rem, 100%);
+    width: min(70%, 30rem);
+    margin-left: -10rem;
 }
 
 main h2{
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--preto);
-    font-size: clamp(25px, 5vw, 2.5rem);
+    font-size: clamp(18px, 2rem, 1.8vw);
     font-weight: bold;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     display: flex;
     justify-content: center;
 }
@@ -75,7 +72,7 @@ main h2{
 
 button, .button, input{
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .button2{
@@ -83,8 +80,8 @@ button, .button, input{
 }
 
 input{
-    border: 0.2rem solid var(--cinza);
-    padding: 1.2rem 1.5rem;
+    border: 0.15rem solid var(--cinza);
+    padding: .8rem 1.5rem;
     outline: none;
 }
 
@@ -93,20 +90,21 @@ input{
 .entrelinha{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp(14px, 3vw, 1.5rem);
+    font-size: clamp(10px, 1rem, 1vh);
     color: var(--cinza);
     font-weight: lighter;
 }
 
 .termos{
     display: block;
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp(14px, 3vw, 1.5rem);
+    font-size: clamp(10px, 1rem, 1vw);
     color: var(--cinza);
     font-weight: lighter;
+    padding: 0 2rem;
 }
 
 .termos > a{
@@ -125,7 +123,7 @@ input{
 .separator div:nth-child(2){
     color: var(--cinza);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp(20px, 4vw, 2rem);
+    font-size: clamp(12px,  1.5rem, 2vw);
     font-weight: bold;
     font-weight: 400;
     padding: 0 1.35rem;
@@ -161,7 +159,7 @@ input{
 .aviso{
     color: var(--preto);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp(15px, 3vw, 1.5rem);
+    font-size: clamp(12px,  1.2rem, 2vw);
     margin-bottom: 3rem;
     line-height: 2rem;
 
@@ -169,7 +167,7 @@ input{
 
 .aviso :nth-child(1){
     font-weight: bold;
-    font-size: clamp(20px, 4vw, 2rem);
+    font-size: clamp(15px, 1.8rem, 2.5vw);
 
 }
 

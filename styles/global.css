@@ -31,18 +31,18 @@ body{
 }
 
 body, input, textarea{
-    font-size: clamp(18px, 2rem, 2.2vw);
+    font-size: clamp(12px,  1.2rem, 2vw);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 button{
-    font-size: clamp(25px, 2.6rem, 2.8vw);
+    font-size: clamp(15px, 1.8rem, 2.5vw);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
 
 .outlined{
-    font-size: clamp(25px, 2.6rem, 2.8vw);
+    font-size: clamp(15px, 1.8rem, 2.5vw);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;   
 }
@@ -82,7 +82,7 @@ button, .button, .outlined{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
 
     background-color: var(--verde-logo);
     color: var(--branco);
@@ -100,6 +100,6 @@ button:hover, .button:hover{
 button.outlined, .button.outlined, .outlined{
     background: var(--branco);
     color: var(--verde-logo);
-    border: .2rem solid var(--verde-logo);
+    border: .1rem solid var(--verde-logo);
 }
 
