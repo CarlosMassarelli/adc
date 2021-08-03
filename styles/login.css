@@ -27,7 +27,7 @@ header{
 
 header a{
     font-family: 'MontSerrat', Roboto, sans-serif;
-    font-size: clamp(20px, 4vw, 2rem);
+    font-size: clamp(20px, 2rem, 4vw);
     color: var(--preto);
     font-weight: 800;
     font-style: italic;
@@ -64,6 +64,7 @@ main h2{
     font-size: clamp(18px, 2rem, 1.8vw);
     font-weight: bold;
     margin-bottom: 3rem;
+    
     display: flex;
     justify-content: center;
 }
@@ -92,7 +93,7 @@ input{
     justify-content: flex-end;
     margin-bottom: 4rem;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: clamp(10px, 1rem, 1vh);
+    font-size: clamp(10px, 1rem, 1vw);
     color: var(--cinza);
     font-weight: lighter;
 }
