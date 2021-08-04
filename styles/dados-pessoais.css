@@ -182,7 +182,7 @@ form > button.outlined{
     border-radius: .5rem;
     font-size: clamp(12px, 1.4rem, 2vw);
 
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding: .5rem 1rem;
     width: 100%;
 }
@@ -190,8 +190,8 @@ form > button.outlined{
 
 form{
     display: block;
-
 }
+
 
 /* CONTEÚDO */
 main{
@@ -204,16 +204,51 @@ main{
 
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--cinza);
-    font-size: clamp(12px, 1.2rem, 2vw);
+    font-size: clamp(12px, 1.4rem, 2vw);
     z-index: 1;
 }
 
 .conteudo{
     display: block;
-    width: 100%;
+    width: 80%;
+}
+
+.conteudo input{
+    font-size: clamp(12px, 1.4rem, 2vw);
+}
+
+.conteudo p{
+    font-size: clamp(14px, 1.6rem, 2vw);
+    align-self: center;
+    color: var(--preto);
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .box_pessoais, .box_endereco{
     display: flex;
+    margin-right: -.5rem;
+}
 
+.informacoes_pessoais, .endereco, .senha{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(12px, 1.4rem, 2vw);
+}
+
+
+input{
+    border: 0.15rem solid var(--cinza);
+    padding: .8rem 1.5rem;
+    outline: none;
+    width: 100%;
+    margin: .5rem 0 .5rem .5rem;
+}
+
+textarea{
+    margin: .5rem 0 .5rem .5rem;
+}
+
+.senha input{
+    width: max(40%, 20rem);
 }
