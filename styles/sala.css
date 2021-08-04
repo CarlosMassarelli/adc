@@ -1,0 +1,146 @@
+/* INICIALIZANDO HTML */
+html, body{
+    min-height: 100%;
+}
+
+/* DISPLAY GRID */
+.content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 6rem 1fr 5rem;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    'footer footer';
+}
+
+
+/* CABEÇALHO */
+header{
+    grid-area: header;
+    background-color: var(--verde-claro);
+}
+
+.cabecalho{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: .5rem 8rem;
+    position: fixed; /* Verificar se está correta o valor declarado*/
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 99;
+}
+
+.menu_superior{
+    display: flex;
+    align-items: center;
+}
+
+.menu_superior > a{
+    font-family: 'MontSerrat', Roboto, sans-serif;
+    font-size: clamp(16px, 1.8rem, 2vw);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--preto);
+    letter-spacing: -.05rem;
+
+    margin: 0 2rem;
+}
+
+.foto_cabecalho{
+    clip-path: circle();
+    max-width: 5rem;
+}
+
+.foto_cabecalho > a > img{
+    object-fit: scale-down;
+    max-width: 5rem;
+    min-height: 5rem;
+    width: auto;
+    height: auto;
+}
+
+
+/* RODAPÉ */
+footer{
+    grid-area: footer;
+}
+
+.rodape{
+    display: block;
+    height: 5rem;
+    border-top: .1rem solid var(--preto);
+    margin: 0 10%;
+
+    font-family: 'MontSerrat', Roboto, sans-serif;
+    color: var(--preto);
+    font-size: clamp(11px, 1.2rem, 1vw);
+    position: relative; /* Verificar se posso manter assim sempre */
+    bottom: 0;
+    width: 80%;
+}
+
+.menu_rodape{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 10%;
+    padding: 0 .2rem;
+}
+
+.menu_rodape > a{
+    text-decoration: none;
+    color: var(--preto);
+
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTEÚDO */
+main{
+    grid-area: left;
+    display: block;
+
+    margin: 4rem 10% 1rem ;
+    min-width: 10rem;
+
+    z-index: 1;
+}
+
+.conteudo{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--preto);
+    font-size: clamp(16px, 1.8rem, 2vw);
+    font-weight: bold;
+}
+
+.conteudo > p{
+    margin-bottom: 2rem;
+    align-self: flex-start;
+}
+
+.conteudo > img{
+    width: 90%;
+
+}
+
+/* UTILIDADES */
+.utilidades{
+    grid-area: right;
+    margin-top: 8rem;
+
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--cinza);
+    font-size: clamp(12px, 1.4rem, 2vw);
+}
+
+.alinhamento{
+    padding: 0 1rem;
+}

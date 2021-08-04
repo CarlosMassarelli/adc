@@ -1,0 +1,105 @@
+/* GERAIS */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    /* Cores utilizadas */
+    --verde-logo: #4C8E11;
+    --verde-preto: #1B3305;
+    --verde-claro: #C8E4BC;
+
+    --cinza: #808080;
+
+    --vermelho: #C33737;
+    
+    --branco: #FFFFFF;
+    --preto: #000000;
+
+    font-size: 62.5%;  /* 10 pixels */
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background-color: var(--branco);
+}
+
+body, input, textarea{
+    font-size: clamp(12px,  1.2rem, 2vw);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button{
+    font-size: clamp(15px, 1.8rem, 2.5vw);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.outlined{
+    font-size: clamp(15px, 1.8rem, 2.5vw);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;   
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* INPUT E BOTOES */
+
+input{
+    border-radius: .5rem;
+    height: 2;
+}
+
+button, .button, .outlined{
+    border-radius: 1.5rem;
+    height: 2;
+
+    font-weight: 700;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+
+    background-color: var(--verde-logo);
+    color: var(--branco);
+
+    transition: filter .2s;
+
+    cursor: pointer;
+}
+
+
+button:hover, .button:hover{
+    filter: brightness(1.2);
+}
+
+button.outlined, .button.outlined, .outlined{
+    background: var(--branco);
+    color: var(--verde-logo);
+    border: .1rem solid var(--verde-logo);
+}
+

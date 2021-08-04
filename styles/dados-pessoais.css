@@ -1,0 +1,219 @@
+/* INICIALIZANDO HTML */
+html, body{
+    min-height: 100%;
+}
+
+/* DISPLAY GRID */
+.content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 6rem 1fr 5rem;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    'footer footer';
+}
+
+
+/* CABEÇALHO */
+header{
+    grid-area: header;
+    background-color: var(--verde-claro);
+}
+
+.cabecalho{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: .5rem 8rem;
+    position: fixed; /* Verificar se está correta o valor declarado*/
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 99;
+}
+
+.menu_superior{
+    display: flex;
+    align-items: center;
+}
+
+.menu_superior > a{
+    font-family: 'MontSerrat', Roboto, sans-serif;
+    font-size: clamp(16px, 1.8rem, 2vw);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--preto);
+    letter-spacing: -.05rem;
+
+    margin: 0 2rem;
+}
+
+.foto_cabecalho{
+    clip-path: circle();
+    max-width: 5rem;
+}
+
+.foto_cabecalho > a > img{
+    object-fit: scale-down;
+    max-width: 5rem;
+    min-height: 5rem;
+    width: auto;
+    height: auto;
+}
+
+
+/* RODAPÉ */
+footer{
+    grid-area: footer;
+}
+
+.rodape{
+    display: block;
+    height: 5rem;
+    border-top: .1rem solid var(--preto);
+    margin: 0 10%;
+
+    font-family: 'MontSerrat', Roboto, sans-serif;
+    color: var(--preto);
+    font-size: clamp(11px, 1.2rem, 1vw);
+    position: relative; /* Verificar se posso manter assim sempre */
+    bottom: 0;
+    width: 80%;
+}
+
+.menu_rodape{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 10%;
+    padding: 0 .2rem;
+}
+
+.menu_rodape > a{
+    text-decoration: none;
+    color: var(--preto);
+
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PERFIL */
+
+.perfil{
+    grid-area: right;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+    
+    border-left: .1rem solid var(--preto);
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    min-width: 15rem;
+
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--cinza);
+    font-size: clamp(12px, 1.4rem, 2vw);
+}
+
+.alinhamento{
+    display: flex;
+    flex: 1; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+
+    position: sticky; 
+    top: 10rem;
+    left: 70%;
+    max-width: 100%;
+}
+
+.foto_perfil{
+    clip-path: circle();
+    min-width: 15rem;
+    max-width: 25rem;
+    box-sizing: border-box;
+    margin: .1rem;
+}
+
+.container{
+    width: 100%;
+    margin: 0 10%;
+}
+
+.form{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+form > button.outlined, .form > button.outlined{
+    color: var(--cinza);
+    border: .1rem solid var(--cinza);
+    border-radius: 1rem;
+    font-size: clamp(12px, 1.4rem, 2vw);
+
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    width: 15rem;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form > button.outlined{
+    background-color: rgb(191, 253, 171);
+}
+
+#perfil input, #perfil textarea{
+    color: var(--cinza);
+    border: .1rem solid var(--cinza);
+    border-radius: .5rem;
+    font-size: clamp(12px, 1.4rem, 2vw);
+
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+
+form{
+    display: block;
+
+}
+
+/* CONTEÚDO */
+main{
+    grid-area: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 4rem 4rem 0 ;
+    min-width: 10rem;
+
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--cinza);
+    font-size: clamp(12px, 1.2rem, 2vw);
+    z-index: 1;
+}
+
+.conteudo{
+    display: block;
+    width: 100%;
+}
+
+.box_pessoais, .box_endereco{
+    display: flex;
+
+}
