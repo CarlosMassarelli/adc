@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <html lang="pt-br">
+    <head>
+        <!-- META e VIEWPORT -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../styles/dados-pessoais.css">
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/CSSReset_total.css">
+
+        <!-- FONTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Verificar as fontes -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400,700;1,800&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <title>ADC | Informações Pessoais</title>
+    </head>
+
+    <!-- CABEÇALHO -->
+    <body>
+        <div id="home" class="content">
+            <header class="cabecalho">
+                <div>
+                    <a href="">
+                        <img src="../images/logo-compacto.svg" alt="ADC">
+                    </a>
+                </div>
+                
+                <div class="menu_superior">
+                    <a href="">Início</a>
+                    <a href="">Finanças</a>
+                    <a href="">Repositório</a>
+                    <a href="">Sala</a>
+                </div>
+
+                <div class="foto_cabecalho">
+                    <a href="">
+                        <img src="../images/foto_perfil.png" alt="Imagem Usuário">
+                    </a>
+                </div>
+            </header>
+
+            <!-- CONTEÚDO -->
+            
+            <main>
+                <div class="conteudo">
+                    <div class="informacoes_pessoais">
+                        <p>Informações Pessoais</p>
+                        <label class="sr-only" for="Nome Completo">Nome Completo</label>
+                        <input type="text" name="nome_completo" placeholder="Nome Completo"/>
+                        <label class="sr-only" for="E-mail">E-mail</label>
+                        <input type="email" name="email" id="" placeholder="E-mail"/>
+                        <div class="box_pessoais">
+                            <label class="sr-only" for="cpf">CPF (somente números)</label>
+                            <input type="number" name="cpf" id="" placeholder="CPF (somente números)"/>
+                            <label class="sr-only" for="data_nascimento">Data de Nascimento</label>
+                            <input type="text" name="data_nascimento" id="" placeholder="Data de Nascimento"/>
+                            <label class="sr-only" for="telefone">Telefone</label>
+                            <input type="tel" name="telefone" id="" placeholder="Telefone"/>
+                        </div>
+                        
+                        <div class="endereco">
+                            <p>Endereço</p>
+                            <div class="box_endereco">
+                                <label class="sr-only" for="cep">CEP</label>
+                                <input type="text" name="cep" placeholder="CEP"/>
+                                <label class="sr-only" for="referência">Referência</label>
+                                <input type="text" name="referencia" placeholder="Referência"/>
+                            </div>
+                            <div class="box_endereco">
+                                <label class="sr-only" for="endereco">Endereço</label>
+                                <input type="text" name="endereco" placeholder="Endereço"/>
+                            </div>
+
+                            <div class="box_endereco">
+                                <label class="sr-only" for="numero_casa">Número</label>
+                                <input type="number" name="numero_casa" id="" placeholder="Número"/>
+                                <label class="sr-only" for="complemento">Complemento</label>
+                                <input type="text" name="complemento" placeholder="Complemento"/>
+                                <label class="sr-only" for="bairro">Bairro</label>
+                                <input type="text" name="bairro" placeholder="Bairro"/>
+                            </div>
+
+                            <div class="box_endereco">
+                                <label class="sr-only" for="cidade">Cidade</label>
+                                <input type="text" name="cidade" placeholder="Cidade"/>
+                                <label class="sr-only" for="estado">Estado</label>
+                                <input type="text" name="estado" id="" placeholder="Estado"/>
+                                <label class="sr-only" for="pais">País</label>
+                                <input type="text" name="pais" placeholder="País"/>
+                            </div>
+                        </div>
+                        
+                        <div class="senha">
+                            <p>Senha</p>
+                            <label class="sr-only" for="senha_atual">Senha Anterior</label>
+                            <input type="text" name="senha_atual" placeholder="Senha atual"/>
+                            <label class="sr-only" for="nova_senha">Nova Senha</label>
+                            <input type="text" name="nova_senha" placeholder="Nova Senha"/>
+                            <label class="sr-only" for="confirmar_nova_senha">Confirmar Nova Senha</label>
+                            <input type="text" name="confirmar_nova_senha" placeholder="Confirmar Nova Senha">
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- PERFIL -->
+            <div class="perfil"  id="perfil">
+                <div class="alinhamento">
+                    <img src="../images/foto_perfil.png" alt="Foto Perfil" class="foto_perfil">
+                    <div class="container">
+                        <div class="form">
+                            <button class="outlined">
+                                Alterar Imagem
+                            </button>
+                        </div>
+                        <form action="*" method="">
+                            <label class="sr-only" for="nome_social">Nome Social</label>
+                            <input type="text" name="nome_social" id="" placeholder="Nome Social"/>
+                            <label class="sr-only" for="faculdade">Faculdade</label>
+                            <input type="text" name="faculdade" id="" placeholder="Faculdade / Concursos"/>
+                            <label class="sr-only" for="objetivos">Objetivos</label>
+                            <textarea name="objetivo" id="" cols="50" rows="1" placeholder="Objetivos"></textarea>   
+                            
+                            <button class="outlined">
+                                Salvar
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- RODAPÉ -->
+
+            <footer class="rodape">
+                <div class="menu_rodape">
+                    <a href="">Termos de Uso</a>
+                    <a href="">Política de Privacidade</a>
+                    <a href="">Cookies</a>
+                    <a href="">contato@adc.com.br</a>
+                </div>
+                <div class="copyright">
+                    © 2021 Aprenda Direito Completo
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
