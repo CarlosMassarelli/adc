@@ -69,12 +69,10 @@ button{
 
 input{
     border-radius: .5rem;
-    height: 2;
 }
 
 button, .button, .outlined{
     border-radius: 1.5rem;
-    height: 2;
 
     font-weight: 700;
     line-height: 1;
