@@ -21,10 +21,14 @@ from django.views.generic import RedirectView
 # Use static() to add url mapping to serve static files during development (only)
 from django.conf import settings
 from django.conf.urls.static import static
+from siteadc import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('adc/', include('adc.urls')),
     path('', RedirectView.as_view(url='/adc/')),
+    path('contas/', include('django.contrib.auth.urls')),
+    path('contas/cadastro/', views.cadastro, name='cadastro'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

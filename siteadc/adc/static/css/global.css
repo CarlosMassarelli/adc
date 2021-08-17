@@ -30,7 +30,7 @@ body{
     background-color: var(--branco);
 }
 
-body, input, textarea{
+body, input, .input, textarea{
     font-size: clamp(12px,  1.2rem, 2vw);
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -67,7 +67,7 @@ button{
 
 /* INPUT E BOTOES */
 
-input{
+input, .input{
     border-radius: .5rem;
 }
 

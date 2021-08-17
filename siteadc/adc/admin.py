@@ -1,3 +1,6 @@
 from django.contrib import admin
+from adc.models import Perfil, Info
 
-# Register your models here.
+admin.site.register(Perfil)
+admin.site.register(Info)
+

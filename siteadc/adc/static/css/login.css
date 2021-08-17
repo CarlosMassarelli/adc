@@ -73,7 +73,7 @@ main h2{
 
 /* INPUT E BOTOES */
 
-button, .button, input{
+button, .button, input, .input{
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -82,7 +82,7 @@ button, .button, input{
     margin-bottom: .5rem;
 }
 
-input{
+input, .input{
     border: 0.15rem solid var(--cinza);
     padding: .8rem 1.5rem;
     outline: none;

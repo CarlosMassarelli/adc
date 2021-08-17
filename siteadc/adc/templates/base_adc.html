@@ -8,15 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../styles/sala.css">
-        <link rel="stylesheet" href="../styles/global.css">
-        <link rel="stylesheet" href="../styles/CSSReset_total.css">
+<!--        <link rel="stylesheet" href="../static/css/home.css">-->
+<!--        <link rel="stylesheet" href="../static/css/global.css">-->
+<!--        <link rel="stylesheet" href="../static/css/CSSReset_total.css">-->
+
+        <!-- CSS DJANGO -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
+        <link rel="stylesheet" href="{% static 'css/CSSReset_total.css' %}">
 
         <!-- FONTES -->
         <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Verificar as fontes -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400,700;1,800&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-        <title>ADC | Sala de Aula</title>
+        <title>ADC | Home</title>
     </head>
 
     <!-- CABEÇALHO -->
@@ -24,41 +29,28 @@
         <div id="home" class="content">
             <header class="cabecalho">
                 <div>
-                    <a href="">
-                        <img src="../images/logo-compacto.svg" alt="ADC">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'imagens/logo-compacto.svg' %}" alt="ADC">
                     </a>
                 </div>
-                
+
                 <div class="menu_superior">
-                    <a href="">Início</a>
-                    <a href="">Finanças</a>
-                    <a href="">Repositório</a>
-                    <a href="">Sala</a>
+                    <a href="{% url 'home' %}">Início</a>
+                    <a href="{% url 'perfil' %}">Perfil</a>
+                    <a href="{% url 'repositorio' %}">Repositório</a>
+                    <a href="{% url 'sala' %}">Sala</a>
                 </div>
 
                 <div class="foto_cabecalho">
-                    <a href="">
-                        <img src="../images/foto_perfil.png" alt="Imagem Usuário">
+                    <a href="{% url 'perfil' %}">
+                        <img src="{% static 'imagens/foto_perfil.png' %}" alt="Imagem Usuário">
                     </a>
                 </div>
             </header>
 
-            <!-- VIDEOAULA -->
-            
-            <main>
-                <div class="conteudo">
-                    <p>Direito Civil - Família - Introdução - Princ. da Solidariedade</p>
-                    <img src="../images/video_vimeo.svg" alt="">
-                </div>
-            </main>
+            <!-- CONTEÚDO -->
 
-            <!-- UTILIDADES -->
-            <div class="utilidades">
-                <div class="alinhamento">
-                    <img src="../images/proximas_aulas.svg" alt="">
-                    
-                </div>
-            </div>
+            {% block conteudo %}{% endblock %}
 
             <!-- RODAPÉ -->
 

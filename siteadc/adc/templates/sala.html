@@ -1,0 +1,29 @@
+
+{% extends "base_adc.html" %}
+
+{% block conteudo %}
+{% load static %}
+
+<!-- CSS -->
+
+        <link rel="stylesheet" href="{% static 'css/sala.css' %}">
+
+<!-- VIDEOAULA -->
+
+<main>
+    <div class="conteudo">
+        <p>Direito Civil - Família - Introdução - Princ. da Solidariedade</p>
+        <img src="{% static 'images/video_vimeo.svg' %}" alt="">
+    </div>
+</main>
+
+<!-- UTILIDADES -->
+<div class="utilidades">
+    <div class="alinhamento">
+        <img src="{% static 'images/proximas_aulas.svg' %}" alt="">
+
+    </div>
+</div>
+
+
+{% endblock %}

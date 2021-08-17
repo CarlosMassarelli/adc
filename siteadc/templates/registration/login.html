@@ -8,9 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../styles/login.css">
-        <link rel="stylesheet" href="../styles/global.css">
-        <link rel="stylesheet" href="../styles/CSSReset_total.css">
+<!--        <link rel="stylesheet" href="../../../../styles/login.css">-->
+<!--        <link rel="stylesheet" href="../../../adc/static/css/global.css">-->
+<!--        <link rel="stylesheet" href="../../../adc/static/css/CSSReset_total.css">-->
+
+        <!-- CSS DJANGO -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
+        <link rel="stylesheet" href="{% static 'css/CSSReset_total.css' %}">
 
         <!-- FONTES -->
         <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Verificar as fontes -->
@@ -21,7 +27,7 @@
     <body>
         <div id="home" class="content">
             <header class="inicio">
-                <a href=""><img src="../images/logo.svg" alt="ADC Logo"/></a>
+                <a href=""><img src="{% static 'imagens/logo.svg'%}" alt="ADC Logo"/></a>
                 <a href="">Aprenda Direito Completo</a>
             </header>
             <!-- Imagem triangular ADC -->
@@ -37,22 +43,39 @@
                 </svg>
             </div>
 
+            {% if form.errors %}
+                <p>Your username and password didn't match. Please try again.</p>
+            {% endif %}
+
+            {% if next %}
+                {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                {% else %}
+                    <p>Please login to see this page.</p>
+                {% endif %}
+            {% endif %}
+
+
             <main>
                 <div class="container">
                     <section>
                         <h2>Acesse sua conta</h2>
-                        <form action="*" method="">
+                        <form action="{% url 'login' %}" method="post">
+                            {% csrf_token %}
                             <div class="campos">
                                 <label class="sr-only" for="email">E-mail</label>
-                                <input type="text" name="email" id="" placeholder="E-mail"/>
+                                <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username" placeholder="Usuário"/>
                                 <label class="sr-only" for="senha">Senha</label>
-                                <input type="password" name="senha" id="" placeholder="Senha"/>
+                                <input type="password" name="password" autocomplete="current-password" required id="id_password" placeholder="Senha"/>
                             </div>
-                            <button class="button2">
-                                Login
-                            </button>
+                                <input  class="button" type="submit" value="login" />
+                                <input class="button" type="hidden" name="next" value="{{ next }}" />
+<!--                            <button class="button2">-->
+<!--                                Login-->
+<!--                            </button>-->
                         </form>
-                        <a href="*" class="entrelinha">
+                        <a href="{% url 'password_reset' %}" class="entrelinha">
                             Esqueci minha senha
                         </a>
                     </section>
@@ -65,7 +88,7 @@
 
                     <section>                        
                         <h2>Não possui acesso?</h2>
-                        <a href="*" class="outlined">
+                        <a href="{% url 'cadastro' %}" class="outlined">
                             Crie sua conta
                         </a>
                     </section>
