@@ -56,7 +56,8 @@
                 <div class="container">
                     <section>
                         <h2>Crie sua conta</h2>
-                        <form action="*" method="">
+                        <form action="{% url 'cadastro' %}" method="post">
+                            {% csrf_token %}
                             <div class="campos">
                                 <label class="sr-only" for="email">Nome</label>
                                 <input type="text" name="nome" id="" placeholder="Nome"/>
